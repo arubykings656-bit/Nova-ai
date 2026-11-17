@@ -1,6 +1,16 @@
 
-function welcomeNova() {
-  alert("Welcome to NOVA AI by MESLER Technologies!");
+
+const sendButton = document.querySelector("button");
+const input = document.querySelector("input");
+
+function sendMessage() {
+  const message = input.value.trim();
+
+  if (!message) return;
+
+  alert("NOVA AI: Hello! I received your message: " + message);
+
+  input.value = "";
 }
 
-console.log("NOVA AI is ready!");
+sendButton.addEventListener("click", sendMessage);
